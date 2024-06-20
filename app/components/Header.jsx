@@ -1,7 +1,10 @@
 import Link from 'next/link'
 import React from 'react'
+import { auth } from '@clerk/nextjs'
 
 const Header = () => {
+    const userId = auth();
+    console.log(userId);
   return (
     <>
         <nav className="bg-blue-700 py-4 px-6 flex items-center justify-between mb-5">
