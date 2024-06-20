@@ -3,6 +3,7 @@ import React from 'react'
 import { auth } from "@clerk/nextjs/server"
 import { UserButton } from '@clerk/nextjs';
 
+
 const Header = () => {
     const { userId } = auth();
   return (
@@ -24,6 +25,11 @@ const Header = () => {
                                     <Link href="/signup" className='text-gray-300 hover:text-white mr-4'>Sign up</Link>
                                 </>
                            )
+                }
+                {
+                    userId && (
+                        <Link href="profile" className='text-gray-300 hover:text-white mr-4'>Profile</Link>
+                    )
                 }
                 <div className='ml-auto'>
                     <UserButton/>
