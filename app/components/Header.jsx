@@ -7,6 +7,7 @@ import { UserButton } from '@clerk/nextjs';
 const Header = () => {
     const { userId } = auth();
   return (
+    
     <>
         <nav className="bg-blue-700 py-4 px-6 flex items-center justify-between mb-5">
             <div className="flex items-center">
